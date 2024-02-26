@@ -1,0 +1,16 @@
+@charset "utf-8";
+*{box-sizing:border-box; padding:0;}
+body{background:url(./images/Sala_de_cine.jpg) no-repeat; position:fixed; background-size:cover; text-align:center;}
+.cabezera{background-color: aquamarine; position:sticky; vertical-align:center; text-align:center;}
+ul{list-style:none; color:white; }
+.pantalla{background-color:whitesmoke; opacity:0.75; justify-content:center; align-items:center; color:black;} 
+.redes{grid-area:redes;}
+.creditos{grid-area:creditos;}
+.creador{grid-area:creador;}
+.suscripcion{grid-area:suscripcion;}
+h1{text-align:center; vertical-align:center;}
+li{display:grid; grid-area:li;}
+.titulo img{display:flex;}
+nav{display:grid; grid-template-areas: "li""li""li"; }
+aside{}
+footer{display:grid; grid-template-areas: "creditos""redes""creador""suscripcion"; background-color:lightgrey; color:white; opacity:0;}
