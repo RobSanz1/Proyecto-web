@@ -1,0 +1,78 @@
+@charset "utf-8";
+@font-face
+    {
+        font-family:"AnekDevanagari";
+        src:url(./fonts/Anek_Devanagari/AnekDevanagari-VariableFont_wdth,wght.ttf);
+    }
+@font-face
+    {
+        font-family:"DMSerifDisplay";
+        src:url(./fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+    }
+    @font-face
+    {
+        font-family:"Anta";
+        src:url(./fonts/Anta/Anta-Regular.ttf);
+    }
+
+*{box-sizing:border-box; padding:0; margin:0;}
+body{background:url(./images/Sala_de_cine.jpg) no-repeat; background-size:cover; display:grid; grid-template-areas:"cabecera cabecera cabecera""contenido contenido aside""contenido contenido form""footer footer footer "; border-radius:2.5px 2.5px 2.5px 2.5px;}
+aside{margin: 10px; grid-area:aside; background-color:grey; color:white; height:50vh; width:90%;}
+fieldset{grid-area:form; background-color: whitesmoke; color:black; font-family:"DMSerifDisplay"; margin:10px;}
+legend{text-align:center; vertical-align:center; text-decoration:solid; color:black; background-color:aquamarine; border-radius: 5px 5px 5px 5px;}
+input{text-align: center; vertical-align:center;}
+textarea{resize: none; height:fit-content;}
+h1,h2,h3{font-family:"DMSerifDisplay";text-align:center; opacity:1;}
+h1{font-family:"Anta"; text-align:center; vertical-align:center;}
+h2{color:aquamarine;}
+footer h2{color:white;}
+aside h2{background-color:lightgrey; color:black;}
+li{color:white;}
+.cabecera{display:flex; flex-direction:column; justify-content:center; align-items:center;  vertical-align:center; text-align:center; font-family:"Anta"; width:100vw; grid-area:cabecera;}
+ul{list-style:none; font-family:"Anta"; display:flex; flex-wrap:wrap; flex-direction:row; justify-content: space-evenly; align-items:center; position:sticky; overflow: hidden;}
+main{grid-area:contenido; font-family:"AnekDevanagari"; margin-bottom:5px; background-color:whitesmoke; opacity:0.75; display:flex; flex-direction:column; vertical-align:top; justify-content:center; align-items:flex-start; color:black;height:75vh; width:85vw;} 
+main p, main h2{opacity:1; margin:10px;}
+main h2{background-color:gray;}
+main strong {background-color:whitesmoke;}
+.titulo{display:flex;flex-direction:row; align-items:center;justify-content:space-evenly;background-color:aquamarine; text-align:center; vertical-align:center; width:100vw;}
+.titulo img{order:0; background-color:white; border-radius: 5px 5px 5px 5px;}
+.titulo h1 {order:1; vertical-align:center; text-align:right;}
+nav{position:sticky;  background-color:darkslategrey; border:0.5px solid white; opacity:0.85; width:100%; border-radius:5px 5px 5px 5px; border:0.5px solid white;}
+footer{color:white; font-family:"DMSerifDisplay"; display:grid; grid-area:footer; grid-template-areas: "informacion informacion informacion informacion""creditos redes creador suscripcion"; background-color:gray; color:white; opacity:1; width:100%;}
+.suscripcion p, .informacion, footer h2{border-bottom:1px solid white;}
+.redes{display:grid; grid-template-areas:"h2 h2 h2 h2 h2 h2""imagen1 imagen2 imagen3 imagen4 imagen5 imagen6";}
+.redes h2{grid-area:h2;}
+.redes .imagen1{grid-area:imagen1;}
+.redes .imagen2{grid-area:imagen2;}
+.redes .imagen3{grid-area:imagen3;}
+.redes .imagen4{grid-area:imagen4;}
+.redes .imagen5{grid-area:imagen5;}
+.redes .imagen6{grid-area:imagen6;}
+.creador, .creditos, .redes {border-right:1px dashed white; border-left:1px dashed white;}
+.creditos{grid-area:creditos;}
+.creador{grid-area:creador;}
+.suscripcion{margin:10px; grid-area:suscripcion; font-family:"Anta"; display:flex; justify-content:center; align-items:center; animation:arcoiris 4s linear infinite alternate; opacity:1; text-align:center; vertical-align:center;}
+.suscripcion a:hover{color:black;}
+address{text-align:center; vertical-align:center; text-decoration:double; color:aquamarine;}
+a, ul{color:black; text-decoration:none;}
+a img:hover{border:1px solid aquamarine;}
+nav a{color:white;}
+nav a:hover, .creditos a:hover{color:aquamarine;}
+footer a{color:white;}
+a:hover, li:hover{color:white; text-decoration:none;}
+.informacion{grid-area:informacion; text-align:center; vertical-align:center;}
+.PantallaFormulario{grid-area:pantalla; margin-bottom:5px; background-color:whitesmoke; opacity:0.75; display:flex; flex-direction:column; vertical-align:top; text-align:center; align-items:flex-start; color:black;}
+.formulario{background:url(./images/Sala_de_cine.jpg) no-repeat; background-size:cover; display:grid; grid-template-areas:"cabecera""pantalla"; border-radius:2.5px 2.5px 2.5px 2.5px;}
+
+@keyframes arcoiris
+    {
+        0%{background:blue;}
+        50%{background:red;}
+        100%{background:yellow;}
+    }
+@media (max-width:700px)
+    {
+        .cabecera, .footer, .titulo{width:100%;}
+        aside{width:90%;}
+        body{grid-template-areas:"cabecera cabecera""contenido aside""form form""footer footer";}
+    }
