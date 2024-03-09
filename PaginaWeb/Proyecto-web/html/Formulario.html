@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Roberto Sánchez Muñoz">
+        <meta name="description" content="pagina1">
+        <title>Formulario</title>
+        <style>
+            @import url(../css/css.css);
+        </style>
+    </head>
+    <body class="formulario">
+            <div class="cabecera">
+                <div class="titulo">
+                    <h1>Cinematográficos</h1>
+                    <img src="../images/ailogo.png" alt="Logo de Cinematográficos, creado en Craiyon" style="width:100px; height:100px">
+                </div>
+            </div>
+                <main class="PantallaFormulario">
+                    <div class="encabezado">
+                        <h2>Formulario de Suscripcion</h2>
+                        <p>Rellene el formulario para detallar que suscripcion desea.</p>
+                        <h3>Comparación :</h3>
+                    </div>
+                        
+                        <div class="opciones">
+                        <div class="Normal">
+                            <h2>Sin suscripción</h2>
+                                <p>Ventajas sin suscripción</p>
+                                    <ul>
+                                        <li><p>Acceda a las funciones básicas.</p></li>
+                                    </ul>
+                                <p>Coste : <strong>GRATIS</strong></p>
+                        </div>
+                        <div class="Premium">
+                            <h2>Premium</h2>
+                            <p>Ventajas con suscripción</p>
+                            <ul>
+                                <li><p>Conece al creador de la página web.</p></li>
+                                <li><p>Participe en las encuestas.</p></li>
+                                <li><p>Sin anuncios.</p></li>
+                                <li><p>Reconocimiento en los créditos.</p></li>
+                                <li><p>Reconocimiento en los créditos.</p></li>
+                            </ul>
+                            <p>Coste : <strong>5.99€</strong></p>
+                        </div>
+                    </div>
+                    <form>
+                    <fieldset>
+                        <label for="nombre">Nombre :</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Introduzca su nombre.">
+
+                        <label for="apellidos">Apellidos :</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Introduzca sus apellidos.">
+
+                        <label for="edad">Edad :</label>
+                        <input type="number" id="edad" name="edad" min="18" max="256">
+                        
+                        <br>
+                        <label for="telefono">Teléfono :</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="(+[0-9]{2})?[0-9]{9}" placeholder="Introduzca su teléfono.">
+                        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" pattern="[a-zA-Z]{256}" placeholder="Introduzca su correo electrónico.">
+                        
+                        <label for="pais">País :</label>
+                        <select id="pais" name="pais">
+                        <option value="pais1">España</option>
+                        <option value="pais2">Estados Unidos</option>
+                        <option value="pais3">Guinea Ecuatorial</option>
+                        <option value="pais4">Nueva Zelanda</option>
+                        <option value="pais5">Rusia</option>
+                        <option value="pais6">Japón</option>
+                        <option value="pais7">México</option>
+                        <option value="pais8">Francia</option>
+                        <option value="pais9">Alemania</option>
+                        <option value="pais10">Reino Unido</option>
+                        </select>
+                        
+                    </fieldset>
+                    <div class="enviar">
+                        <label for="enviar">Enviar :</label>
+                        <input type="submit" id="enviar" name="enviar">
+                    </div>
+                    
+                    </form>
+                </main>
+                <footer>
+                    <h2><a href="../index.html">Volver al inicio :</a></h2>
+                </footer>
+    </body>
+</html>

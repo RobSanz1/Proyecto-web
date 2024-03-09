@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/*Formularios y texto*/
+
+@font-face
+    {
+        font-family:"AnekDevanagari";
+        src:url(../fonts/Anek_Devanagari/AnekDevanagari-VariableFont_wdth,wght.ttf);
+    }
+
+/*Encabezados*/
+
+@font-face
+    {
+        font-family:"DMSerifDisplay";
+        src:url(../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+    }
+
+@font-face
+    {
+        font-family:"Anta";
+        src:url(../fonts/Anta/Anta-Regular.ttf);
+    }
+
+/*General*/
+
+*{box-sizing:border-box; padding:0; margin:0;}
+body{background:url(../images/Sala_de_cine.jpg) no-repeat; background-size:cover; display:grid; grid-template-areas:"cabecera cabecera cabecera""contenido contenido aside""contenido contenido form""footer footer footer"; border-radius:2.5px 2.5px 2.5px 2.5px;}
+aside{margin: 10px; grid-area:aside; background-color:grey; color:white; height:fit-content;}
+.encabezado{display:grid; justify-content:center; align-items:center;}
+p{font-family:"AnekDevanagari"; font-size:1.35rem; text-align:left;}
+textarea{resize: none; height:fit-content;}
+h1,h2,h3{font-family:"DMSerifDisplay"; text-align:center; opacity:1; font-size:1.5rem;}
+h1{font-family:"Anta"; text-align:center; vertical-align:center;}
+h2{color:aquamarine;}
+img{opacity: 1;}
+aside h2{background-color:lightgrey; color:black;}
+.cabecera{grid-area:cabecera; display:flex; flex-direction:column; justify-content:center; align-items:center;  vertical-align:center; text-align:center; font-family:"Anta"; width:100vw;}
+ul{list-style:none; font-family:"Anta"; display:flex; flex-wrap:wrap; flex-direction:row; justify-content: space-evenly; align-items:center; overflow: hidden;}
+main{grid-area:contenido; font-family:"AnekDevanagari"; margin-bottom:5px; background-color:whitesmoke; opacity:0.75; display:flex; flex-direction:column; text-align:center; vertical-align:top; color:black; height:fit-content; width:80vw;} 
+main p, main h2{opacity:1; margin:10px;}
+main h2{text-align:center; vertical-align:center;}
+article h2{background-color:gray; margin:10px; width:fit-content;}
+.avisos strong {color:red;}
+.titulo{display:flex;flex-direction:row; align-items:center;justify-content:space-evenly;background-color:aquamarine; text-align:center; vertical-align:center; width:100vw;}
+.titulo img{order:0; background-color:white; border-radius: 5px 5px 5px 5px;}
+.titulo h1 {order:1; vertical-align:center; text-align:right;}
+nav{background-color:darkslategrey; border:0.5px solid white; opacity:0.85; width:100vw; border-radius:5px 5px 5px 5px;}
+footer{color:white; font-family:"DMSerifDisplay"; display:grid; grid-area:footer; grid-template-areas: "informacion informacion informacion informacion""creditos redes creador suscripcion"; background-color:gray; color:white; opacity:1;}
+.suscripcion p, .informacion, footer h2{border-bottom:1px solid white;}
+.redes{display:grid; grid-template-areas:"h2 h2 h2 h2 h2 h2""imagen1 imagen2 imagen3 imagen4 imagen5 imagen6";}
+.redes h2{grid-area:h2;}
+.redes .imagen1{grid-area:imagen1;}
+.redes .imagen2{grid-area:imagen2;}
+.redes .imagen3{grid-area:imagen3;}
+.redes .imagen4{grid-area:imagen4;}
+.redes .imagen5{grid-area:imagen5;}
+.redes .imagen6{grid-area:imagen6;}
+.creador, .creditos, .redes {border-right:1px dashed white; border-left:1px dashed white;}
+.creditos{grid-area:creditos;}
+.creador{grid-area:creador;}
+.suscripcion{margin:10px; grid-area:suscripcion; font-family:"Anta"; display:flex; justify-content:center; align-items:center; animation:arcoiris 4s linear infinite alternate; opacity:1; text-align:center; vertical-align:center;}
+address{text-align:center; vertical-align:center; text-decoration:dashed; color:aquamarine;}
+a, ul{color:black; text-decoration:none;}
+main a{color:lightskyblue;}
+a img:hover{border:1px solid aquamarine;}
+nav a, footer a, li, footer h2{color:white;}
+nav a:hover, .creditos a:hover{color:aquamarine;}
+.cabecera strong{border: 2.5px solid white; color:aquamarine; border-radius:5px 5px 5px 5px;}
+a:hover, .cabecera li:hover{color:black; text-decoration:none;}
+.informacion{grid-area:informacion; text-align:center; vertical-align:center;}
+.comentarios{height:fit-content; display:flex; justify-content:center; align-items:center;}
+fieldset{grid-area:form; background-color: whitesmoke; color:black; margin:10px; font-family:"DMSerifDisplay";}
+legend{text-align:center; vertical-align:center; text-decoration:solid; color:black; background-color:aquamarine; border-radius: 5px 5px 5px 5px;}
+input{text-align:center; vertical-align:center;}
+
+/*Formulario*/
+
+.formulario .encabezado{width:100vw;}
+.formulario footer h2{text-align:center; vertical-align:center;}
+.formulario{background:url(../images/Sala_de_cine.jpg) no-repeat; background-size:cover; display:grid; grid-template-areas:"cabecera""pantalla""footer"; border-radius:2.5px 2.5px 2.5px 2.5px;}
+.PantallaFormulario{grid-area:pantalla; width:100vw; margin-bottom:5px; background-color:whitesmoke; opacity:0.75; vertical-align:center; text-align:center; display:flex; flex-direction:column; flex-wrap:wrap; align-items:center; height:fit-content;}
+.opciones{display:flex; flex-direction:row; justify-content:space-between; align-items:center; gap:5rem;}
+.PantallaFormulario input, .PantallaFormulario label, .PantallaFormulario .enviar{margin:20px; font-family:"AnekDevanagari";}
+.PantallaFormulario fieldset{width:90vw;}
+.PantallaFormulario .enviar{font-size:2rem;}
+input:invalid{color:red;}
+.Premium{background: url(../images/Seamless_Rich_Golden_Gif.gif) no-repeat; background-size:cover; color:black;}
+.Premium h2{color:white; background-color:black; opacity:0.5; border-radius:2.5px 2.5px 2.5px 2.5px;}
+.Premium, .Normal{border:1px solid black; border-radius:2.5px 2.5px 2.5px 2.5px; width:25vw; height:50vh;}
+.Premium ul, .Normal ul{list-style: circle; display:flex; flex-direction:column; flex-wrap:wrap; align-items:flex-start; justify-content:flex-start;}
+.Premium ul p,.Normal ul p{font-size:1rem; }
+.Premium strong, .Normal strong{color:green;}
+.Normal{background-color:black; color:white;}
+.Normal h2{color:white; background-color:lightgrey; opacity:0.5; border-radius:2.5px 2.5px 2.5px 2.5px;}
+.Normal ul p{color:grey;}
+.formulario footer {display:flex; justify-content:center; align-items:center;}
+.formulario input{height:2.5rem; width:5rem;}
+
+/*Noticias*/
+.PantallaNoticias strong{color:green;}
+.PantallaNoticias article{margin:5px;}
+
+/*Encuestas*/
+
+.encabezado h2{background-color:aquamarine; color:black;}
+.encuestas{display:flex; flex-direction:row; flex-wrap:wrap;}
+
+
+@keyframes arcoiris
+    {
+        0%{background:blue;}
+        50%{background:red;}
+        100%{background:yellow;}
+    }
+    
+@media (max-width:650px)
+    {
+        main{width:65vw;}
+        .comentarios, .cabecera, footer{width:100vw;}
+        aside{width:30vw; gap:1px;}
+        body{grid-template-areas:"cabecera cabecera""contenido aside""form form""footer footer";}
+    }
